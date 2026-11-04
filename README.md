@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Inventory Management System
 
-## Getting Started
+A full-stack inventory management web application built for the Devixo Solutions Web Development Internship (Task 04).
 
-First, run the development server:
+**Live demo:** YOUR-VERCEL-LINK
+**GitHub:** https://github.com/hifza18abbas-maker/inventory-system
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Authentication**
+- User registration with input and password validation
+- Login and logout using JWT stored in an httpOnly cookie
+- Protected dashboard pages and protected API routes
+- Passwords hashed with bcrypt
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Inventory (CRUD)**
+- Create, read, update and delete products
+- Each user only sees and manages their own products
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Dashboard**
+- Statistics: total products, total units, low stock items, stock value
+- Stock by category chart
+- Low stock alerts and recent activity
+- Search by product name and filter by category
+- Data table with pagination
 
-## Learn More
+**Bonus features**
+- Product image upload (resized in the browser before saving)
+- Search and pagination
 
-To learn more about Next.js, take a look at the following resources:
+**UI/UX**
+- Responsive, mobile-friendly layout with sidebar navigation
+- Consistent design across all pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Security and error handling**
+- Server-side input validation
+- Protected routes and APIs
+- Secrets stored in environment variables
+- Clear error messages for users
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- Frontend: Next.js (App Router), React, Tailwind CSS
+- Backend: Next.js API routes (Node.js)
+- Database: MongoDB Atlas with Mongoose
+- Authentication: JWT, bcryptjs
+- Deployment: Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Run Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository and install dependencies:
+   ```
+   npm install
+   ```
+2. Create a `.env.local` file in the project root:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_secret_key
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+4. Open http://localhost:3000
+
+## Author
+
+Hifza
